@@ -1,0 +1,112 @@
+<!-- Declaración del tipo de documento como HTML5 -->
+<!DOCTYPE html>
+<!-- Inicio del documento HTML con el idioma español -->
+<html lang="es">
+
+<head>
+    <!-- Configuración de la codificación de caracteres como UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Configuración de la visualización adaptable a dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página que se mostrará en la pestaña del navegador -->
+    <title>Perfil Linktree</title>
+    <!-- Enlace a la hoja de estilos de Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Enlace a la hoja de estilos principal de la página -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <!-- Contenedor principal para el perfil -->
+    <div class="profile-container">
+        <!-- Imagen de perfil del usuario -->
+        <img src="./images/imagen-perfil.jpg" alt="Imagen de perfil" class="profile-image">
+
+        <!-- Contenedor para el nombre y la descripción del perfil -->
+        <div id="profile-info"></div>
+
+        <!-- Contenedor de botones de enlaces principales del perfil -->
+        <div class="links">
+            <!-- Enlace a las habilidades técnicas con función para abrir modal -->
+            <a href="#" onclick="openModal('modalHabilidades')">Habilidades Técnicas</a>
+            <!-- Enlace a la experiencia con función para abrir modal -->
+            <a href="#" onclick="openModal('modalExperiencia')">Experiencia</a>
+            <!-- Enlace a la educación con función para abrir modal -->
+            <a href="#" onclick="openModal('modalEducacion')">Educación</a>
+        </div>
+
+        <!-- Contenedor para los enlaces de redes sociales -->
+        <div class="social-links">
+            <!-- Enlace a TikTok con ícono de Font Awesome -->
+            <a href="https://www.tiktok.com" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+            <!-- Enlace a Facebook con ícono de Font Awesome -->
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <!-- Enlace a Instagram con ícono de Font Awesome -->
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal para las habilidades técnicas -->
+    <div id="modalHabilidades" class="modal">
+        <!-- Contenido del modal -->
+        <div class="modal-content">
+            <!-- Botón para cerrar el modal -->
+            <span class="close" onclick="closeModal('modalHabilidades')">&times;</span>
+            <!-- Título del modal -->
+            <h2>Habilidades Técnicas :</h2>
+            <!-- Detalle de habilidades técnicas con herramientas, bases de datos y desarrollo web -->
+            <p>
+                <strong><em>Herramientas:</em></strong> Git, GitHub, VS Code.<br>
+                <strong><em>Bases de Datos:</em></strong> SQL, MySQL.<br>
+                <strong><em>Desarrollo Web:</em></strong> HTML5, CSS3, JS, frameworks modernos.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal para la experiencia -->
+    <div id="modalExperiencia" class="modal">
+        <!-- Contenido del modal -->
+        <div class="modal-content">
+            <!-- Botón para cerrar el modal -->
+            <span class="close" onclick="closeModal('modalExperiencia')">&times;</span>
+            <!-- Título del modal -->
+            <h2>Experiencia :</h2>
+            <!-- Detalle de la experiencia en soporte de sistemas y desarrollo web -->
+            <p>
+                <strong><em>Soporte de Sistemas:</em></strong> Implementación de ERP, soporte y capacitación a usuarios, resolución de incidencias técnicas, 
+                optimización de procesos, configuración y mantenimiento de redes y sistemas.<br>
+                <strong><em>Prácticas en Desarrollo Web:</em></strong> Interfaces web con HTML, CSS y JS, colaboración en proyectos ágiles, uso de control de versiones.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal para la educación -->
+    <div id="modalEducacion" class="modal">
+        <!-- Contenido del modal -->
+        <div class="modal-content">
+            <!-- Botón para cerrar el modal -->
+            <span class="close" onclick="closeModal('modalEducacion')">&times;</span>
+            <!-- Título del modal -->
+            <h2>Educación</h2>
+            <!-- Detalle de la educación con instituciones y programas -->
+            <p>
+                Bachiller Técnico en Computación e Informática - <strong><em>Cibertec</em></strong><br>
+                Full Stack Software Development - <strong><em>Enter Tech School</em></strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo de JavaScript que contiene funciones de interacción -->
+    <script src="./app.js"></script>
+</body>
+
+</html>

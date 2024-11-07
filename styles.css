@@ -1,0 +1,164 @@
+/* Reset básico para eliminar márgenes y padding en todos los elementos y establecer box-sizing en border-box */
+* {
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el padding predeterminado */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del elemento */
+}
+
+/* Estilo base para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif; /* Define Arial como la fuente principal */
+    display: flex; /* Aplica un modelo de caja flexible */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    height: 100vh; /* Establece la altura al 100% del viewport */
+    background-color: #030303fd; /* Fija el color de fondo del cuerpo */
+}
+
+
+/* Contenedor principal del perfil */
+.profile-container {
+    text-align: center; /* Centra el texto del contenedor */
+    padding: 20px; /* Agrega espacio interior alrededor del contenido */
+    width: 90%; /* Ancho flexible del contenedor */
+    max-width: 400px; /* Ancho máximo del contenedor */
+    height: 700px; /* Fija una altura para el contenedor */
+    border-radius: 15px; /* Bordes redondeados */
+    background-color: white; /* Color de fondo blanco */
+    background-image: url('./images/imagen-fondo.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor del contenedor */
+}
+
+/* Estilo para la imagen de perfil */
+.profile-image {
+    width: 120px; /* Ancho de la imagen de perfil */
+    height: 120px; /* Altura de la imagen de perfil */
+    border-radius: 50%; /* Hace la imagen circular */
+    border: 2px solid #fff; /* Borde blanco alrededor de la imagen */
+    margin-top: 5px; /* Espacio superior de 5px */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra debajo de la imagen */
+}
+
+/* Contenedor para la información del perfil */
+#profile-info {
+    background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente negro */
+    padding: 10px; /* Espacio interior alrededor del contenido */
+    border-radius: 38px; /* Bordes redondeados */
+    max-width: 70%; /* Ancho máximo de 70% del contenedor */
+    margin: 10px auto; /* Espaciado y centrado */
+    text-align: center; /* Centra el texto */
+}
+
+#profile-info h1 {
+    font-size: 20px; /* Tamaño de fuente del título */
+    color: #f5f5f5; /* Color claro del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra para mejorar visibilidad */
+}
+
+#profile-info p {
+    font-size: 16px; /* Tamaño de fuente para el párrafo */
+    color: #fbf8f8; /* Color claro para el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra para mejor visibilidad */
+}
+
+/* Contenedor para enlaces principales */
+.links {
+    margin-top: 80px; /* Margen superior para separar los enlaces del contenido anterior */
+}
+
+.links a {
+    display: block; /* Hace que cada enlace ocupe toda la línea */
+    margin: 10px 0; /* Espaciado vertical entre enlaces */
+    padding: 15px; /* Espaciado interior del enlace */
+    font-size: 14px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado */
+    background-color: rgba(243, 243, 243, 1); /* Color de fondo */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra del enlace */
+    transition: background-color 0.3s, border 0.3s, color 0.3s; /* Transición suave */
+}
+
+.links a:hover {
+    background-color: transparent; /* Fondo transparente al pasar el cursor */
+    color: white; /* Texto en blanco al pasar el cursor */
+    border: 2px solid white; /* Borde blanco al pasar el cursor */
+}
+
+/* Estilo para los modales */
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed; /* Posición fija para que cubra toda la pantalla */
+    z-index: 1; /* Capa superior */
+    padding-top: 160px; /* Espaciado superior */
+    left: 0; /* Alineación a la izquierda */
+    top: 0; /* Alineación en la parte inferior */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.modal-content {
+    background-color: #fff; /* Fondo blanco */
+    margin: auto; /* Centrado horizontal */
+    padding: 20px; /* Espacio interior */
+    border: 1px solid #888; /* Borde gris */
+    width: 80%; /* Ancho del modal */
+    max-width: 500px; /* Ancho máximo */
+    position: relative; /* Relativo para posicionamiento del botón de cierre */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: justify;
+}
+
+/* Botón para cerrar el modal */
+.close {
+    position: absolute; /* Posición absoluta en el contenedor */
+    top: 10px; /* Posicionamiento superior */
+    right: 20px; /* Posicionamiento derecho */
+    color: #aaa; /* Color gris claro */
+    font-size: 24px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cambia el cursor a pointer */
+}
+
+.close:hover,
+.close:focus {
+    color: #000; /* Color negro al pasar el cursor o hacer foco */
+}
+
+/* Estilos para los enlaces de redes sociales */
+.social-links {
+    display: flex; /* Muestra enlaces en línea */
+    justify-content: center; /* Centra los elementos */
+    gap: 20px; /* Espaciado entre enlaces */
+    margin-top: 200px; /* Margen superior para separar de otros elementos */
+}
+
+.social-links a {
+    font-size: 27px; /* Tamaño del icono */
+    color: rgba(0, 0, 0, 0.8); /* Color inicial */
+    text-decoration: none; /* Quita subrayado */
+    transition: color 0.3s; /* Transición en color */
+}
+
+.social-links a:hover {
+    color: rgb(165, 198, 205); /* Cambia el color al pasar el cursor */
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 480px) {
+    .profile-container {
+        padding: 15px; /* Reduce el padding en móviles */
+        height: auto; /* Ajusta la altura automática */
+    }
+    .links a {
+        font-size: 16px; /* Aumenta tamaño de fuente en enlaces */
+        padding: 10px; /* Reduce el padding en enlaces */
+    }
+    .social-links a {
+        font-size: 18px; /* Reduce el tamaño de iconos de redes */
+    }
+}
